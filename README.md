@@ -126,6 +126,38 @@ Allows users to search for properties by location, date, price, and amenities. I
 Lets hosts block out unavailable dates and prevents double bookings. This ensures accurate scheduling and improves reliability for both hosts and guests.
 
 
+API Security
 
+1. Authentication (Login & Registration Security)
+What: Use secure authentication mechanisms such as hashed passwords (e.g., bcrypt) and token-based authentication (e.g., JWT).
+Why it's crucial: Protects user accounts from unauthorized access and ensures that only legitimate users can access personal or booking-related data.
+
+2. Authorization (Role-Based Access Control)
+What: Implement role-based permissions to restrict what actions users can perform (e.g., only hosts can manage properties, only guests can book).
+Why it's crucial: Prevents unauthorized actions and protects sensitive or business-critical operations (e.g., a guest shouldn’t be able to delete someone else’s property).
+
+3. Input Validation & Sanitization
+What: Sanitize and validate all user inputs on both client and server sides to prevent injection attacks (e.g., SQL injection, XSS).
+Why it's crucial: Prevents malicious inputs that could compromise the database or affect user sessions and interface integrity.
+
+4. Rate Limiting & Brute Force Protection
+What: Limit repeated requests to sensitive endpoints (e.g., login) using tools like express-rate-limit.
+Why it's crucial: Helps prevent brute force attacks and abuse of the API, enhancing platform performance and user safety.
+
+5. HTTPS / TLS Encryption
+What: Enforce HTTPS for all data transmission.
+Why it's crucial: Ensures that sensitive data (e.g., passwords, payment info) is encrypted during transit and not intercepted by third parties.
+
+6. Secure Payment Processing
+What: Use trusted third-party payment processors (e.g., Stripe, PayPal) and never store raw credit card data.
+Why it's crucial: Protects financial information, ensures compliance with PCI standards, and builds trust with users.
+
+7. Session Management & Token Expiry
+What: Implement secure session tokens with expiration, and refresh tokens where applicable.
+Why it's crucial: Prevents session hijacking and reduces the risk of unauthorized access from persistent tokens.
+
+8. Error Handling & Logging
+What: Log errors securely and avoid exposing stack traces or internal messages to users.
+Why it's crucial: Helps detect and fix issues without leaking sensitive implementation details that attackers could exploit.
 
 
