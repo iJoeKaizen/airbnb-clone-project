@@ -161,3 +161,22 @@ What: Log errors securely and avoid exposing stack traces or internal messages t
 Why it's crucial: Helps detect and fix issues without leaking sensitive implementation details that attackers could exploit.
 
 
+CI/CD Pipeline
+
+CI/CD (Continuous Integration/Continuous Deployment) pipelines are automated workflows that streamline the process of building, testing, and deploying your application whenever code changes are made.
+Continuous Integration ensures that every code change is automatically tested and integrated into the main codebase.
+Continuous Deployment (or Delivery) automates the deployment of changes to a staging or production environment once they pass tests.
+
+Why CI/CD Is Important for This Project
+Faster Development: Changes go live faster without manual steps.
+Higher Quality: Automated testing reduces bugs and ensures stable deployments.
+Consistency: Eliminates human error in building and deploying code.
+Collaboration: Developers can safely contribute without breaking the project.
+
+Tools You Can Use
+GitHub Actions: Automate CI/CD directly within your GitHub repository.
+Docker: Containerize your app for consistent deployment across environments.
+Docker Compose: Manage multi-container setups like app + database.
+Heroku / Vercel / AWS / DigitalOcean: For deploying the application.
+Jest / Supertest: For automated backend testing.
+ESLint / Prettier: For code formatting and linting during the CI process.
